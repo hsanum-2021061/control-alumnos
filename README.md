@@ -1,9 +1,7 @@
-# Control de Alumnos
+# Control de Alumnos Tares Practica
 
-Renombrar el archivo example.env a .env, esto es con la intención de tener las variables de entorno
-configuradas en le proyecto, se estara agregando más en el futuro.
-
-Para instalar los modulos de node ejecutar el comando
-```
-npm install
-```
+El proyecto consiste en una aplicación en ambiente web (Backend) la cual
+servirá para: poder llevar el Control de Alumnos en un Centro Educativo. Todo lo
+que se le pedirá debe trabajarse con Nodejs, MongoDB y Express. De ahí en más
+usted es libre de utilizar cualquier otro framework o librería que usted desee
+utilizar. (Librerías adicionales a utilizar: bcrypt – mongoose – bodyparser)
