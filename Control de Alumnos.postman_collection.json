@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "00d95ea5-1316-4ce0-8cac-d539c6bf98c9",
+		"name": "Control de Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST MAESTROS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jorge\",\r\n    \"correo\": \"jorge@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"ROL_MAESTRO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/maestros/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"maestros",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MAESTROS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/maestros/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"maestros",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN MAESTROS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"jorge@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/loginMaestro",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"loginMaestro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ALUMNOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Sanabria NAC\",\r\n    \"correo\": \"NAC@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/alumnos/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN ALUMNOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"luis@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/loginAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"loginAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALUMNOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/alumnos/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT MAESTROS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"NAC TODO\",\r\n    \"correo\": \"jorge@gmail.com\",\r\n    \"password\": \"123456\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/maestros/editar/63f6be3956f7be4d32c54108",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"maestros",
+						"editar",
+						"63f6be3956f7be4d32c54108"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ALUMNOS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2ZWE2NGNkZDU2MGE5MmQ1YzIzNmMiLCJpYXQiOjE2NzcxMjk0MDgsImV4cCI6MTY3NzE0MzgwOH0.oeO3WD0cCRhmfSERE2UoGU34_WGY431I2clq6YC6xR4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/alumnos/eliminar/63f6ea74cdd560a92d5c2370",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos",
+						"eliminar",
+						"63f6ea74cdd560a92d5c2370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CURSOS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YmUzOTU2ZjdiZTRkMzJjNTQxMDgiLCJpYXQiOjE2NzcyMDI3NjIsImV4cCI6MTY3NzIxNzE2Mn0.Va25_cQmrueM4__xylH-LeDMWvIwDRxCJcRNcl3e-Rg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Mat\",\r\n    \"descripcion\": \"sexo en la playa\",\r\n    \"alumnos\": [\"63f6ea64cdd560a92d5c236c\", \"63f6ea74cdd560a92d5c2370\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CURSOS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YmUzOTU2ZjdiZTRkMzJjNTQxMDgiLCJpYXQiOjE2NzcyMDI3NjIsImV4cCI6MTY3NzIxNzE2Mn0.Va25_cQmrueM4__xylH-LeDMWvIwDRxCJcRNcl3e-Rg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Mathh\",\r\n    \"descripcion\": \"pepe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/editar/63f816a79be7b36f6490b97f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"editar",
+						"63f816a79be7b36f6490b97f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CURSOS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YmUzOTU2ZjdiZTRkMzJjNTQxMDgiLCJpYXQiOjE2NzcyMDM3MzEsImV4cCI6MTY3NzIxODEzMX0.ffu1N2gyZphzZF0sPQ5aSU-IXW0qS4Js7za6L-U2DW4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/eliminar/63f816a79be7b36f6490b97f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"eliminar",
+						"63f816a79be7b36f6490b97f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ASIGNACION-ALUMNO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2ZWE2NGNkZDU2MGE5MmQ1YzIzNmMiLCJpYXQiOjE2NzcyMDUyODUsImV4cCI6MTY3NzIxOTY4NX0.aqGG1QHrQHJbppcvfIvwYCf9EI1b_vlCxWRGI9LmCJY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alumnos\": [\"63f6ea64cdd560a92d5c236c\", \"63f6ea74cdd560a92d5c2370\", \"63f6ea74cdd560a92d5c2370\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/asignar-alumno/63f816a79be7b36f6490b97f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"asignar-alumno",
+						"63f816a79be7b36f6490b97f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CURSOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cursos/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
